@@ -66,19 +66,51 @@
 
 	  <div class="container">
 	  <header class="page-header">
-	      <h3>World View</h3>
+	      <h2>Information Visualisation (Lab 2)</h2>
 	      <div class="row">
-	        <h1 class="col-md-8">Cross indexes</h1>
-	        <h3 class="quiet col-md-4 right" style="text-align:right;">pool (2010-2014)</h3>
+	        <h4 class="col-md-8">Analysis of happyness and its affecting factors across countries</h4>
+	        <!-- <h3 class="quiet col-md-4 right" style="text-align:right;">pool (2010-2014)</h3> -->
 	      </div>
 	  </header>
 
+	  <div class="container row">
+
+	  	<div class="col-md-12">
+
+	  		<p>
+	  			For the second visualization I have considered computing similarly to the happiness index, two more indexes - income and religious for every country in the world, following the pipeline presented below.
+	  		</p>
+			<center><img src="images/pipeline2.png" ></center>
+			</br>
+			<p>
+				For this data representation I used a scatterplot, on which I plotted the aggregated data about every country. Each country is represented as a circle on the graph.The x axis describes the index of happiness, the y axis stays for the index of income, while the size of the circle represents the religious index of a particular country. The circles have different colors just for differentiation, without having a more sophisticated significance. For exploring the data in more details it is possible to zoom and translate the regions of ineterest, as well as additional detais show up on hovering a specific circle(country). 
+			</p>
+		</br>
+		<h3>Happiness index across the world</h3>
+	  	</div>
+
+	  </div>
+
 	  <div class="content row">
-	  <article class="post col-md-12">
-	      <div id="chart"></div>
-	      <div>Graph data obtained from <a href="http://www.worldvaluessurvey.org/">worldvaluessurvey.org</a></div>
-	  </article>
-	</div>
+		  <article class="post col-md-12">
+		      <div id="chart"></div>
+		      <div>Graph data obtained from <a href="http://www.worldvaluessurvey.org/">worldvaluessurvey.org</a></div>
+		  </article>
+	  </div>
+
+	  <div class="content row">
+
+	  	<div class="col-md-12">
+	  		<br><br>
+	  		<p>
+	  			Although, with a very rough estimate from the obtained results it might be observed a general tendency across the countries, regarding the dependency between the level of income and the index of happiness. With some exceptions, the data shows that indeed the wealthier people are the happier they feel, regardless of general beliefs. In contrast while comparing the dependency of religion and happiness it might be seen that the points are more mixed and spread, which leads to the assumtion that there is no strict dependence between these two variables. 
+
+	  		</p>
+	  		<hr></hr>
+        	<a class="btn btn-primary" href="index.html"> <- Back to Analitical trail 1</a>
+	  	</div>
+	  </div>
+
 	</div>
     <script src="js/graph.js"  type="text/javascript"></script>
   </body>

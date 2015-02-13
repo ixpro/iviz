@@ -41,17 +41,24 @@
         <p>This visualization appeared to be quite good, providing relevant visual mappings (color to country) and some interaction for filtering the data and displaying it in a different scale (view transformations). Nevertheless one thing that I still found confusing was the algorithm (data transformations) by which the given index has been computed. </p>
 
         <center><img src="images/screen2.png" width="900px"></center>
-        
+          
         <p>My initial goal has been to compare the index of happiness by countries and cross other variables (religion, income), which unfortunately is not possible to do using the tools provided by WVS. Hence, there is an opportunity to export the raw data, which encouraged me to try to come up with a visualization on my own. 
         The raw data that I was able to collect consisted of multiple answers, grouped by country in an Excel sheet (Figure 4). As mentioned previously, a certain common index was needed, in order to be able to compare countries on a higher level of abstraction.  Therefore I have applied a number of data transformations. First of all I have transposed the table, for easing the overview, since there are numerous columns and only several rows, and it just felt natural to have it the other way. Next, I have mapped the 7 answers on a scale from 4 (very happy) to 0 (don’t know, no answer, inappropriate response), and computed the index for every country (Figure 5) as being the sum of all (scaleValue &times; percentValue/100). 
+        I have filtered out the responses that were inapropriate as well as those that were not relevant. 
         </p>
 
         <center><img src="images/idxpc.png" ></center>
 
+        <p>After computing the index for every country, I was able to merge the data with geo.json for being able to ultimately display it on a map. For visualizing this information, I have used the following pipeline.</p>
+        <center><img src="images/pipeline1.png" ></center>
+
+        <p>Although, the chart type is similar to the one used by WVS, there are a number of things that I have considered improving. For instance, I have visually discretized countries by assigning colors to the countries having their happiness index within the same range with others. This approach makes it possible to actually see the differences between the different countries, as opposed to a continuos gradient. Moreover, since there are people that may hardly perceive certain colors, I have used a set of colors that is universal( taking into consideration the color blindness particularity). Ultimately, I came up with the following representation of the happiness across different countries of the world.  
+        </p>
+ 
+
+        <h3>Happiness index across the world</h3>
+
       </div>
-
-
-
   </div>
 
   <div class="row">
@@ -72,6 +79,17 @@
       <script src="js/logic.js"  type="text/javascript"></script>
       </article>
   </div>
+
+    <div class="row">
+      <div class="col-md-12">
+
+        <p>The very first conclusion that I was able to draw based on the visual representation, has been the one that most of the countries are actually happy :-). This, however should be treated with a significant subjectiveness, since the sample sice of the actual respondents corelated to the actual number of people leaving worldwide is similar to the ratio of a drop in the ocean. Nevertheless, I was still interested in analysing the influence of other factors like income and religion on people's perception of happiness, which leaded me in developing one more visualization. </p>
+        <hr></hr>
+        <center><a class="btn btn-primary" href="scatter.html">Next -> (Analitical trail 2)</a></center>
+      </div>
+    </div>
+
+
 </div>
 </div>
 </body></html>
